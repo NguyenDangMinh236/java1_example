@@ -1,0 +1,59 @@
+1. Tao 1 project có tên là LMS (Learning Management System), rồi định nghĩa các lớp (class) bên dưới:
+	Lớp Sinh Viên (Student):
+		Có các thuộc tính: 
+			Mã số SV (Code), 
+			Họ và Tên (Fullname), 
+			Ngày sinh (DateOfBirth), 
+			Điểm Môn 1 (Mark1), 
+			Điểm Môn 2 (Mark2), 
+			Điểm Môn 3 (Mark3)
+		Có các phương thức (method): 
+			Tính điểm trung bình (getAverageMark), 
+			Xếp loại học sinh (getLevel)
+			Tự điểm danh (checkin)
+			In thông tin cá nhân ra màn hình
+			In ra danh sách vắng / phép / trễ của môn học đó: print (String subjectName)
+	Lớp Điểm Danh (Attendance)
+		Có các thuộc tính:
+			Tên môn học (SubjectName), Ngày điểm danh (AttendanceDate), Trạng thái (Status = Absence ~ Vắng mặt, =  Late ~ Đi trễ, Permission ~ Nghỉ có phép)
+		Có các phương thức (method):
+			In ra danh sách các học viên trong ngày hiện tại: print()
+			In ra danh sách các học viên trong ngày bất kỳ: print(Date date)
+			In ra danh sách các học viên vắng / phép / trễ của môn học đó: print(String subjectName, String status, Date date)
+			In ra danh sách các học viên cùng với số lần nghỉ với các trạng thái vắng / phép / trễ của môn học : print(String subjectName)
+
+(*) Nang cao
+	Tạo lớp Setup để khởi tạo các giá trị mẫu.
+	Áp dụng Encapsulation và các public field của các class
+	Lớp Lớp Học (Batch)
+		Có các thuộc tính:
+			Tên lớp (Name), danh sách học viên trong lớp (StudentList: ArrayList)
+		Có các phương thức:
+			In toàn bộ danh sách học viên trong lớp đó: print()
+			In toàn bộ danh sách họ viên theo xếp loại trong lớp đó: print(LevelNameEnum level)
+			Thêm một học viên vào trong lớp: addStudent(Student s)
+	Bổ sung các enum sau, và thay các kiểu dữ liệu của các field trước đây bằng kiểu enum tương ứng:
+		SubjectNameEnum
+		AttendanceStatusEnum
+		LevelNameEnum
+
+2. Sau khi định nghĩa các lớp trên, viết 1 project có tên là LMS (Learning Management System) để thực hiện các yêu cầu sau:
+	Nhập danh sách sinh viên.
+	In danh sách sinh viên ra màn hình.
+	Sử dụng cấu trúc switch-case để in ra màn hình xếp loại của tất cả học sinh như sau:
+		Xếp loại A: Học sinh Giỏi
+		Xếp loại B: Học sinh Khá
+		Xếp loại C: Học sinh Trung Bình
+		Xếp loại D: Học sinh Yếu.
+	In danh sách sinh viên đạt loại Khá, Giỏi ra màn hình.
+	Điểm danh từng sinh viên nhập vào với môn JAVA1 của ngày hiện tại.
+	Điểm danh từng sinh viên nhập vào với môn JAVA1 của ngày 3/7/2014.
+	In ra danh sách điểm danh của các học viên
+	
+	Chú thích:
+	Điểm trung bình là trung bình quân của tổng Điểm Môn 1 + Điểm Môn 2 + Điểm Môn 3.
+	Xếp loại được tính như sau:
+		A:	Điểm trung bình >= 8
+		B:	7 <= Điểm trung bình < 8 
+		C:	5 <= Điểm trung bình < 7
+		D:	Điểm trung bình < 5
