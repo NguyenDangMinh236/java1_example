@@ -3,6 +3,8 @@ package vanvtt.trainer.nestedClass.example;
 public class MemberOuterExample {
 	private int exam = 30;
 
+	private static String test = "testing ";
+
 	// khai bao Inner Class
 	class Inner {
 		void printMessage() {
@@ -10,10 +12,31 @@ public class MemberOuterExample {
 		}
 	}
 
+	static class InnerStatic {
+		void printMessage() {
+			System.out.println("Gia tri cua bien test la: " + test);
+		}
+
+		static void printMessage1() {
+			System.out.println("Gia tri cua bien test la: " + test);
+		}
+	}
+
 	// phan ket thuc cua khai bao
 	public static void main(String args[]) {
+
+		vanvtt.trainer.nestedinterface.example.TestClass T = new vanvtt.trainer.nestedinterface.example.TestClass();
+
 		MemberOuterExample obj = new MemberOuterExample();
+
 		MemberOuterExample.Inner in = obj.new Inner();
+
 		in.printMessage();
+
+		MemberOuterExample.InnerStatic inner = new InnerStatic();
+		inner.printMessage();
+
+		MemberOuterExample.InnerStatic.printMessage1();
 	}
+
 }
