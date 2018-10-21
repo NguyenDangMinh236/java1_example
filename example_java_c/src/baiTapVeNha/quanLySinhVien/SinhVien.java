@@ -27,7 +27,8 @@ public class SinhVien {
 	}
 
 	public void registerLearnJapanee() {
-		if ("Gioi".equals(getHocLuc()) && getKhoa() instanceof KhoaCNTT) {
+		//
+		if ("Gioi".equals(getHocLuc()) && this.khoa instanceof KhoaCNTT) {
 			CanHocTIengNhat hocJapaneeFree = new CanHocTIengNhat() {
 				@Override
 				public void registerLearnJapanee() {

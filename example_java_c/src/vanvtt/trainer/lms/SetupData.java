@@ -16,7 +16,7 @@ public class SetupData {
 		s1.checkIn(SubjectNameEnum.Java);
 		s1.checkIn(SubjectNameEnum.CSharp, new Date("2012/09/12"));
 		s1.checkIn(SubjectNameEnum.Xml, new Date("2013/09/10"));
-		
+
 		// ================
 		Student s2 = new Student();
 		s2.code = "X002";
@@ -27,10 +27,11 @@ public class SetupData {
 		s2.mark2 = 8;
 		s2.mark3 = 10;
 
+		s2.checkIn(SubjectNameEnum.Html, AttendanceStatusEnum.Allowed.toString());
 		s2.checkIn(SubjectNameEnum.Java);
 		s2.checkIn(SubjectNameEnum.CSharp, new Date("2013/09/10"));
 		s2.checkIn(SubjectNameEnum.Xml, new Date("2013/09/12"));
-		
+
 		// ====================
 		Student s3 = new Student();
 		s3.code = "X003";

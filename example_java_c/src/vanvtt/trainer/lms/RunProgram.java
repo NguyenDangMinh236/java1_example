@@ -3,10 +3,6 @@ package vanvtt.trainer.lms;
 import java.util.List;
 
 public class RunProgram {
-	/**
-	 * @param args
-	 *            the command line arguments
-	 */
 	public static void main(String[] args) {
 
 		List<Student> list = SetupData.getDefaultData();

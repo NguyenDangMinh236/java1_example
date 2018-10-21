@@ -11,7 +11,11 @@ public class RunTest {
 		Khoa khoaTruyenThong = new KhoaTruyenThong(3, "Khoa truyen thong", "Thuyet trinh");
 
 		List<SinhVien> truongBachKhoa = new ArrayList<>();
-
+		
+		SinhVien sv = new SinhVien(1, "Hoa", khoaCNTT, "Gioi");
+		truongBachKhoa.add(sv);
+		
+		
 		truongBachKhoa.add(new SinhVien(1, "Hoa", khoaCNTT, "Gioi"));
 		truongBachKhoa.add(new SinhVien(1, "Khoa", khoaNgoaiGiao, "Kha"));
 		truongBachKhoa.add(new SinhVien(1, "Khoa", khoaTruyenThong, "Kha"));

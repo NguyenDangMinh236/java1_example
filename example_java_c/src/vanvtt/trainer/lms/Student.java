@@ -63,7 +63,16 @@ public class Student {
 		System.out.format("Average Mark: %.2f\n", this.getAverageMark());
 		System.out.format("Level: %s\n", this.getLevel());
 
+		System.out.format("Checkin:\n");
+		for (Attendance attendance : this.Attendances) {
+			System.out.println("\tStatus: " + attendance.status);
+			System.out.println("\tSubject: " + attendance.subject);
+			System.out.println("\tAttendanceDate" + attendance.attendanceDate);
+			System.out.format("\tAttendanceDate: %s\n\n", attendance.attendanceDate);
+		}
 		System.out.println("\n\n");
+		
+		
 	}
 
 	public double getAverageMark() {
@@ -71,6 +80,20 @@ public class Student {
 		return Math.round(average * 10.0) / 10.0;
 	}
 
+
+	public void checkIn(SubjectNameEnum subject, String typeStatusVang) {
+		Attendance attendance = new Attendance();
+		attendance.subject = subject;
+		attendance.attendanceDate = new Date();
+		if(AttendanceStatusEnum.Absence.equals(typeStatusVang))
+			attendance.status = AttendanceStatusEnum.Absence;
+		else 
+			attendance.status = AttendanceStatusEnum.Allowed;
+
+		this.Attendances.add(attendance);
+	}
+
+	
 	public void checkIn(SubjectNameEnum subject) {
 		Attendance attendance = new Attendance();
 		attendance.subject = subject;
